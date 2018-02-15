@@ -4,7 +4,7 @@
 1. Clone the repo and `cd` to project root:
     ```
     git clone https://github.com/deepmipt/stand_squad_ru.git
-    cd stand_squad_en
+    cd stand_squad_ru
     ```
 2. Run script to download and unpack model components:
     ```
@@ -29,7 +29,7 @@
     >>> nltk.download('punkt')
     ```
 7. Specify model endpoint host (`api_host`) and port (`api_port`) in `squad_agent_config.json`
-7. Specify `CUDA_VISIBLE_DEVICES` and virtual environment path (if necessary) in `run_en_squad.sh`
+7. Specify `CUDA_VISIBLE_DEVICES` and virtual environment path (if necessary) in `run_ru_squad.sh`
 8. Run model:
     ```
     ./run_ru_squad.sh
