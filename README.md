@@ -42,7 +42,7 @@
 2. Clone the repo and `cd` to project root:
     ```
     git clone https://github.com/deepmipt/stand_squad_ru.git
-    cd stand_squad_en
+    cd stand_squad_ru
     ```
 3. Build Docker image:
    ```
