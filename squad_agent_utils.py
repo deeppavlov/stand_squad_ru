@@ -12,12 +12,13 @@ MIN_CONTEXT_LENGTH = 70
 def sber2squad(sber_tasks):
     squad_tasks = {'version': 1.1, 'data': [{'title': 'SberChallenge', 'paragraphs': []}]}
     for paragraph in sber_tasks['paragraphs']:
-        squad_tasks['data'][0]['paragraphs'].append(paragraph)
 
         # In case of to short context - fill it with dummy symbols
-        # context = paragraph['context']
-        # if len(context) < MIN_CONTEXT_LENGTH:
-        #     paragraph['context'] = '{} . {}'.format(context, '@' * (MIN_CONTEXT_LENGTH - len(context)))
+        context = paragraph['context']
+        if len(context) < MIN_CONTEXT_LENGTH:
+            paragraph['context'] = '{} . {}'.format(context, '@' * (MIN_CONTEXT_LENGTH - len(context)))
+
+        squad_tasks['data'][0]['paragraphs'].append(paragraph)
 
     return squad_tasks
 
