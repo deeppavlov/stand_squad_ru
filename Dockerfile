@@ -1,4 +1,4 @@
-FROM stand/docker_cuda
+FROM stand/docker_cuda:8.0
 
 VOLUME /logs
 WORKDIR /app
